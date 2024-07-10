@@ -1,23 +1,103 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
+html{
+    scroll-behavior: smooth;
+}
+
+body{
     background-color: #FDF0DC;
-    margin: 0;
-    font-family: Arial, sans-serif;
 }
 
-header {
+.container{
+    width: 1280px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    width: 100%;
+    padding: 60px 4%;
+    position: fixed;
+    top:0;
+    left:0;
+    transition: 0.5s;
+    z-index: 9999;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo-menu{
+    transition: 0.3s ease-in-out
+}
+
+.logo-menu:hover{
+    transform: scale(1.1);
+}
+
+header.rolagem{
+    background-color: #7F4F24;
+    padding: 20px 4%;
+}
+
+header.rolagem a{
+    color: white
+}
+
+header ul{
+    list-style-type: none;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+header ul li a{
     position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+header ul li a::after{
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+header ul li a:hover:after{
     width: 100%;
 }
 
-.imagemprincipal{
-    width: 100%;
-    height: 70vh;
-    display: block;
+.banner{
+    height: 100vh;
+    background-image: url(/src/imagens/portalMucugêInfos.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 50px;
+    font-family: "Jolly Lodger", system-ui;
+    letter-spacing: 6px;
+    word-spacing: 5px;
 }
 
 .content {
@@ -111,7 +191,7 @@ header {
 
 .areacarrossel{
     margin-top:  10vh;
-    margin-bottom: 10vh;
+    margin-bottom: 3vh;
     width: 98.7vw;
     display: flex;
     flex-direction: column;
@@ -183,6 +263,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    font-family: "Poppins", sans-serif;
 }
 
 .confira .tituloconfira{
@@ -232,7 +313,7 @@ header {
     flex-direction: column;
     gap: 10px;
     font-size: 15px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
 .rodape .nav .eventos{
